@@ -10,6 +10,10 @@ session_lock = Lock()
 ERR_NO_SESSION = 1
 ERR_NO_OTP = 2
 
+@app.get('/')
+def index():
+    return "Yes, it's running."
+
 @app.get('/new_session/<sid>')
 def new_session(sid):
     session_map[sid] = None

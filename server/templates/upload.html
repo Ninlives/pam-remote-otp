@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Which session to attach?</h1>
+
+{% for sid in sessions %}
+<a href="/upload_otp/{{ sid }}/{{ otp }}">{{ sid }}</a>
+{% endfor %}
+ 
+</body>
+</html>

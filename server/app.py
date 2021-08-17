@@ -24,7 +24,7 @@ def new_session(sid):
                 session_map.pop(sid)
 
     Timer(app.config['EXPIRE_TIME'], clear).start()
-    return { "Sucess": True }
+    return { "Success": True }
 
 @app.get('/upload_otp/<sid>/<otp>')
 def upload(sid, otp):
